@@ -1,0 +1,132 @@
+.portfolio {
+
+    // .portfolio__tabs
+
+    &__tabs {
+        display: flex;
+        box-sizing: border-box;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 50px;
+
+        button {
+            border-radius: 30px;
+            background-color: #f5f5f5;
+            color: $black;
+            display: block;
+            border: none;
+            padding: 5px 8px;
+            box-sizing: border-box;
+            transition: .35s ease;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $greenLite;
+            }
+
+            &.active {
+                background-color: $green;
+                color: #fff;
+            }
+        }
+    }
+
+    // .portfolio__tab-btn
+
+    &__tab-btn {}
+
+    // .portfolio__tab-item
+
+    &__tab-item {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -10px;
+
+        &.show {
+            display: flex;
+        }
+
+        &.hidden {
+            display: none;
+        }
+    }
+
+    // .portfolio__card
+
+    &__card {
+        width: calc(50% - 20px);
+        margin: 0 10px 20px;
+        box-sizing: border-box;
+        color: $black;
+        text-decoration: none;
+
+        &:hover {
+            .img {
+                .fake-btn {
+                    color: #fff;
+                    background-color: $green;
+                }
+            }
+
+            .text {
+                .tags {
+                    span {
+                        color: $black;
+                        border-color: $gray;
+                    }
+                }
+            }
+        }
+
+        .img {
+            height: 220px;
+            position: relative;
+
+            .fake-btn {
+                position: absolute;
+                bottom: 15px;
+                right: 15px;
+                color: $green;
+                background-color: #fff;
+                border-radius: 20px;
+                font-size: 14px;
+                padding: 5px 10px;
+                border: none;
+                transition: .35s ease;
+            }
+
+            margin-bottom: 15px;
+
+            img {
+                display: block;
+                height: 100%;
+                width: 100%;
+                object-fit: fill;
+            }
+        }
+
+        .text {
+            h3 {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 1.4;
+                color: $black;
+            }
+
+            .tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+
+                span {
+                    transition: .35s ease;
+                    padding: 5px 10px;
+                    border-radius: 20px;
+                    font-size: 14px;
+                    color: #969FA8;
+                    border: 1px solid #F2F2F2;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+.header {
+        padding: 40px 0;
+		// .header__wrap
+
+		&__wrap {
+            display: flex;
+            align-items: center;
+		}
+
+		// .header__title
+
+		&__title {
+            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+            a {
+                color: $gray;
+                text-decoration: none;
+                img {
+                    display: block;
+                    max-width: 145px;
+                    width: 100%;
+                    margin-bottom: 8px;
+
+                }
+                span {
+                    display: block;
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+            }
+		}
+
+		// .header__action
+
+		&__action {
+            margin-left: 30px;
+            display: flex;
+            gap: 30px;
+            box-sizing: border-box;
+            a {
+
+            }
+		}
+}

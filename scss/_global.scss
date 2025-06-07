@@ -1,0 +1,215 @@
+.container {
+    max-width: calc(1075px + 30px);
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+$black: #202020;
+$gray: #969FA8;
+$font: 'Raleway', sans-serif;
+$green: #046D53;
+$greenLite: #046D531A;
+
+
+body {
+    font-family: $font;
+}
+
+.main-btn {
+    padding: 15px 30px;
+    box-sizing: border-box;
+    font-weight: 500;
+    font-size: 16px;
+    color: $green;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
+    background-color: $greenLite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: .35s ease;
+
+    img,
+    svg {
+        display: block;
+       
+        object-fit: contain;
+        margin-right: 8px;
+
+        path {
+            transition: .35s ease;
+        }
+    }
+
+    &:hover {
+        color: #fff;
+        background-color: #046D53;
+    }
+
+    &.whatsapp-link {
+        color: #48C95F;
+        background-color: #F5F5F5;
+
+        svg {
+            path {
+                fill: #48C95F;
+            }
+        }
+
+        &:hover {
+            background-color: #48C95F;
+            color: #fff;
+
+            svg {
+                path {
+                    fill: #fff;
+                }
+            }
+        }
+    }
+
+    &.telegram-link {
+        color: #27A6E5;
+        background-color: #F5F5F5;
+
+        svg {
+            path {
+                fill: #27A6E5;
+            }
+        }
+
+        &:hover {
+            background-color: #27A6E5;
+            color: #fff;
+
+            svg {
+                path {
+                    fill: #fff;
+                }
+            }
+        }
+    }
+    &.focus-btn {
+        background-color: #FFE240;
+        color: $black;
+        svg {
+            path{
+                fill: $black;
+            }
+        }
+        &:hover {
+            background-color: $green;
+            color: #fff;
+            svg {
+                path {
+                    fill: #fff;
+                }
+            }
+        }
+    }
+}
+
+
+.content-wrap {
+
+    // .content-wrap__wrap
+
+    &__wrap {
+        display: flex;
+        align-items: stretch;
+
+        .sidebar {
+            height: fit-content;
+            position: sticky;
+            top: 30px;
+            max-width: 220px;
+            margin-right: 100px;
+            width: 100%;
+            &__info {
+                color: $gray;
+                font-size: 12px;
+                span {
+
+                }
+                a {
+                    display: block;
+                    color: inherit;
+                    text-decoration: none;
+                }
+            }
+            &.not-top {
+                nav {
+                    margin-bottom: 40px;
+                }
+                .sidebar__action {
+                    margin-bottom: 40px;
+                }
+            }
+            .main-btn {
+                padding: 15px;
+                width: 100%;
+                max-width: none;
+                box-sizing: border-box;
+            }
+            &__action {
+                margin-bottom: 250px;
+                transition: .35s ease;
+                
+                .main-btn {
+                    margin-bottom: 10px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            nav {
+                
+                margin-bottom: 250px;
+                transition: .35s ease;
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                    list-style: none;
+                    li {
+                        margin-bottom: 20px;
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                        a {
+                            color: $black;
+                            text-decoration: none;
+                            font-weight: 5000;
+                            font-size: 16px;
+                            line-height: 1.2;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+.main-content {
+    max-width: 756px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.section-title {
+    margin: 0;
+    display: block;
+    box-sizing: border-box;
+    color: #202020;
+    font-size: 38px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
