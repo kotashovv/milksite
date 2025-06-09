@@ -992,6 +992,8 @@ body {
 .portfolio__card .img {
   height: 220px;
   position: relative;
+  border-radius: 20px;
+  overflow: hidden;
   margin-bottom: 15px;
 }
 .portfolio__card .img .fake-btn {
@@ -1011,8 +1013,8 @@ body {
   display: block;
   height: 100%;
   width: 100%;
-  -o-object-fit: fill;
-     object-fit: fill;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .portfolio__card .text h3 {
   font-size: 16px;
