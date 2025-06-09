@@ -16,6 +16,7 @@ $greenLite: #046D531A;
 
 body {
     font-family: $font;
+    
 }
 
 .main-btn {
@@ -127,7 +128,10 @@ body {
     &__wrap {
         display: flex;
         align-items: stretch;
-
+        @media(max-width:920px) {
+            padding-top: 90px;
+            
+        }
         .sidebar {
             height: fit-content;
             position: sticky;
@@ -276,6 +280,16 @@ body {
     border: none;
     background-color: transparent;
     cursor: pointer;
+
+    &::before,
+    &::after,
+    span {
+        transition:
+            top 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+            transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+            background-color 0.35s;
+    }
+
     &::before {
         content: '';
         position: absolute;
@@ -295,7 +309,7 @@ body {
         height: 4px;
         border-radius: 4px;
         background-color: $green;
-        bottom: 5px;
+        top: calc(100% - 9px);
         pointer-events: none;
     }
     span {
@@ -305,7 +319,28 @@ body {
         height: 4px;
         border-radius: 4px;
         background-color: $green;
-        top: calc(50% - 1px);
+        top: calc(50% - 2px);
         pointer-events: none;
+        transition:
+            top 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+            opacity 0.2s 0.15s;
+    }
+
+    &.active {
+        &::before {
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg) scaleX(1.2);
+        }
+        &::after {
+            top: 50%;
+            transform: translateY(-50%) rotate(-45deg) scaleX(1.2);
+        }
+        span {
+            opacity: 0;
+            transform: scaleX(0.5) scaleY(0.5);
+            transition:
+                opacity 0.15s,
+                transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
     }
 }
