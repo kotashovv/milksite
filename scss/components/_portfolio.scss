@@ -130,3 +130,16 @@
         }
     }
 }
+
+@media(max-width:560px) {
+    .portfolio {
+        &__tab-item {
+            margin: 0;
+        }
+        &__card {
+            margin: 0 0 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+    }
+}

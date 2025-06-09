@@ -421,8 +421,14 @@ body {
   position: sticky;
   top: 30px;
   max-width: 220px;
+  min-width: 220px;
   margin-right: 100px;
   width: 100%;
+}
+@media (max-width: 1200px) {
+  .content-wrap__wrap .sidebar {
+    margin-right: 30px;
+  }
 }
 .content-wrap__wrap .sidebar__info {
   color: #969FA8;
@@ -501,6 +507,74 @@ body {
   margin-bottom: 30px;
   line-height: 1.2;
 }
+@media (max-width: 920px) {
+  .section-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 920px) {
+  .content-wrap .main-content {
+    width: 100%;
+    max-width: none;
+  }
+  .content-wrap .sidebar {
+    display: none;
+  }
+}
+.header__mobile-btn {
+  display: none;
+  margin-left: 25px;
+}
+@media (max-width: 920px) {
+  .header__mobile-btn {
+    display: block;
+  }
+}
+
+.burger-btn {
+  width: 40px;
+  height: 33px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 5px;
+  position: relative;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.burger-btn::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  width: calc(100% - 10px);
+  height: 4px;
+  border-radius: 4px;
+  background-color: #046D53;
+  top: 5px;
+  pointer-events: none;
+}
+.burger-btn::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  width: calc(100% - 10px);
+  height: 4px;
+  border-radius: 4px;
+  background-color: #046D53;
+  bottom: 5px;
+  pointer-events: none;
+}
+.burger-btn span {
+  position: absolute;
+  left: 5px;
+  width: calc(100% - 10px);
+  height: 4px;
+  border-radius: 4px;
+  background-color: #046D53;
+  top: calc(50% - 1px);
+  pointer-events: none;
+}
 
 .header {
   padding: 40px 0;
@@ -546,6 +620,29 @@ body {
   gap: 30px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+@media (max-width: 920px) {
+  .header {
+    padding: 25px 0;
+    border-bottom: 1px solid #F2F2F2;
+  }
+  .header__title {
+    max-width: 145px;
+  }
+  .header__title a span {
+    display: none;
+  }
+  .header__action button,
+  .header__action a {
+    padding: 11px 12px;
+    font-size: 14px;
+  }
+  .header__action button {
+    display: none;
+  }
+  .header__action .whatsapp-link {
+    display: none;
+  }
 }
 .hero {
   margin-bottom: 30px;
@@ -631,13 +728,29 @@ body {
   display: block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: 75px;
-  height: 75px;
+  max-width: 75px;
+  width: 100%;
   border-radius: 50%;
   -o-object-fit: contain;
      object-fit: contain;
 }
 
+@media (max-width: 920px) {
+  .hero {
+    padding: 40px 0 20px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin-bottom: 0;
+  }
+  .hero h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  .hero p {
+    max-width: 280px;
+    font-size: 16px;
+  }
+}
 .services {
   padding: 100px 0 50px;
   -webkit-box-sizing: border-box;
@@ -647,8 +760,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 50px;
 }
@@ -758,6 +869,19 @@ body {
   transition: 0.35s ease;
 }
 
+@media (max-width: 920px) {
+  .services {
+    padding-top: 50px;
+    padding-bottom: 25px;
+  }
+  .services__tabs {
+    padding-bottom: 10px;
+    overflow: auto;
+  }
+  .services__tabs button {
+    white-space: nowrap;
+  }
+}
 .experts {
   padding: 50px 0;
 }
@@ -777,8 +901,8 @@ body {
 .experts__swiper-slide .img img {
   width: 100%;
   height: 100%;
-  -o-object-fit: fill;
-     object-fit: fill;
+  -o-object-fit: cover;
+     object-fit: cover;
   -o-object-position: bottom center;
      object-position: bottom center;
 }
@@ -796,6 +920,12 @@ body {
   color: #969FA8;
 }
 
+@media (max-width: 920px) {
+  .experts {
+    padding-top: 25px;
+    padding-bottom: 50px;
+  }
+}
 .portfolio__tabs {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -906,4 +1036,16 @@ body {
   font-size: 14px;
   color: #969FA8;
   border: 1px solid #F2F2F2;
+}
+
+@media (max-width: 560px) {
+  .portfolio__tab-item {
+    margin: 0;
+  }
+  .portfolio__card {
+    margin: 0 0 20px;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
 }

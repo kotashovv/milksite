@@ -7,7 +7,6 @@
 
     &__tabs {
         display: flex;
-        flex-wrap: wrap;
         gap: 10px;
         margin-bottom: 50px;
 
@@ -133,4 +132,18 @@
 
     // .services__price
 
+}
+
+@media(max-width:920px){
+    .services {
+        padding-top: 50px;
+        padding-bottom: 25px;
+        &__tabs {
+            padding-bottom: 10px;
+            button {
+                white-space: nowrap;
+            }
+            overflow: auto;
+        }
+    }
 }
