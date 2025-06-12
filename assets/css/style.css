@@ -1380,3 +1380,37 @@ body {
             box-sizing: border-box;
   }
 }
+
+.single-page__title {
+  margin-bottom: 20px;
+}
+
+.single-page__title h2 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 140%;
+}
+
+.single-page__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.single-page__info span {
+  white-space: nowrap;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  padding: 3px 10px;
+  border: 1px solid #969FA8;
+  color: #969FA8;
+  border-radius: 20px;
+}

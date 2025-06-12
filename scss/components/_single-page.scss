@@ -1,0 +1,54 @@
+.single-page {
+  // .single-page__title
+
+  &__title {
+    margin-bottom: 20px;
+    h2 {
+      margin: 0;
+      font-weight: 600;
+      font-size: 38px;
+      line-height: 140%;
+    }
+  }
+
+  // .single-page__info
+
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-items: center;
+    span {
+      white-space: nowrap;
+      font-weight: 400;
+      font-size: 14px;
+      text-align: center;
+      padding: 3px 10px;
+      border: 1px solid $gray;
+      color: $gray;
+      border-radius: 20px;
+    }
+  }
+
+  // .single-page__content
+
+  &__content {
+  }
+
+  // .single-page__imgs
+
+  &__imgs {
+  }
+}
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.swiper-navigation {
+}
+.swiper-slide-prev {
+}
+.swiper-slide-next {
+}
