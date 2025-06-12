@@ -1,7 +1,9 @@
 .services {
     padding: 100px 0 50px;
     box-sizing: border-box;
-
+    &.mt-0 {
+        padding-top: 0;
+    }
     // .services__tabs
     .section-title {}
 
