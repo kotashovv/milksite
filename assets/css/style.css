@@ -691,6 +691,50 @@ body {
   transition: opacity 0.15s, transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55), -webkit-transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
+.breadcrumbs {
+  margin-bottom: 30px;
+}
+
+.breadcrumbs ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.breadcrumbs ul li {
+  position: relative;
+  padding-right: 14px;
+  margin-right: 5px;
+  opacity: .7;
+}
+
+.breadcrumbs ul li:last-child {
+  opacity: 1;
+  pointer-events: none;
+}
+
+.breadcrumbs ul li:last-child::before {
+  display: none;
+}
+
+.breadcrumbs ul li::before {
+  content: '/';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 12px;
+}
+
+.breadcrumbs ul li a {
+  display: block;
+  color: #202020;
+  text-decoration: none;
+  font-size: 12px;
+}
+
 .header {
   padding: 40px 0;
 }
