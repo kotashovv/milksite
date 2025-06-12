@@ -8,6 +8,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    const singleSlider = new Swiper('.single-page__imgs', {
+        slidesPerView: 1,
+        spaceBetween: 15,
+        navigation: {
+            prevEl: '.single-page__imgs .swiper-slide-prev',
+            nextEl: '.single-page__imgs .swiper-slide-next',
+        }
+    })
+
     const clientsSlider = new Swiper('.clients__swiper', {
         slidesPerView: 9,
         spaceBetween: 10,
@@ -156,4 +165,6 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.style.overflow = '';
         }
     };
+
+
 })
