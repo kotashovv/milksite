@@ -158,6 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
             mobileMenubtn.classList.add('active');
             mobileMenu.classList.add('active');
             document.body.style.overflow = 'hidden';
+            closeAllPopup();
         }
         function CloseMenu() {
             mobileMenubtn.classList.remove('active');
@@ -166,5 +167,41 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+
+    const buttons = document.querySelectorAll('.main-btn[data-popup]');
+    const popupOverlay = document.querySelector('.popup');
+    const popupItems = document.querySelectorAll('.popup-item');
+
+    function closeAllPopup() {
+        popupOverlay.classList.remove('active');
+        popupItems.forEach(item => item.classList.remove('active'));
+        document.body.style.overflow = 'auto';
+    }
+
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            const popupId = button.getAttribute('data-popup');
+            const targetPopup = document.querySelector(`.popup-item[data-item="${popupId}"]`);
+
+            if (targetPopup) {
+                closeAllPopup();
+                popupOverlay.classList.add('active');
+                targetPopup.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    });
+
+    popupOverlay.addEventListener('click', (e) => {
+        if (e.target === popupOverlay) {
+            closeAllPopup();
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeAllPopup();
+        }
+    });
 
 })

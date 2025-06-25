@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -1351,4 +1352,112 @@ body {
 }
 .single-page__imgs .swiper-navigation button img {
   display: block;
+}
+
+/* обновление: Попап стили */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(22, 20, 20, 0.3137254902);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.35s ease;
+  transition: 0.35s ease;
+}
+.popup.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup-item {
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 430px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 22px;
+  z-index: 100;
+  position: relative;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  -webkit-transform: translateY(25px) scale(0.9);
+      -ms-transform: translateY(25px) scale(0.9);
+          transform: translateY(25px) scale(0.9);
+}
+.popup-item.active {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0) scale(1);
+      -ms-transform: translateY(0) scale(1);
+          transform: translateY(0) scale(1);
+}
+.popup-item__title {
+  margin-bottom: 40px;
+  display: block;
+}
+.popup-item__title h2 {
+  display: block;
+  margin: 0;
+  color: #202020;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.4;
+  max-width: 210px;
+}
+.popup-item form {
+  display: block;
+}
+.popup-item form label {
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+}
+.popup-item form label input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 20px 10px;
+  width: 100%;
+  display: block;
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 10px;
+}
+.popup-item form .action {
+  margin-top: 40px;
+}
+.popup-item form .action button {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.popup-item__info span {
+  display: block;
+  margin-top: 10px;
+  font-size: 12px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 1.4;
+  color: #969FA8;
+}
+.popup-item__info span a {
+  color: #046D53;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
